@@ -5,19 +5,21 @@ import { Icon } from '@iconify/react'
 const experiences = [
   {
     company: 'Outgrow',
-    role: 'Front End Web Developer',
+    role: 'Full Stack Developer',
     period: 'Jul 2024 – Present',
     location: 'Gurugram, India',
     type: 'Full-time',
     current: true,
     logo: 'solar:buildings-bold-duotone',
     color: '#7c3aed',
-    description: 'Building and optimizing scalable frontend architecture for SaaS products serving thousands of users.',
+    description: 'Building full-stack SaaS products end-to-end — React frontends, Node.js/Express APIs, MongoDB databases, and AI integrations serving thousands of users.',
     responsibilities: [
-      'Built and optimized scalable frontend architecture using React.js, Redux, and Tailwind CSS',
-      'Developed reusable UI components for dashboards, payment systems, authentication, and analytics',
-      'Enhanced user experience by implementing theming, tool management flows, and onboarding features',
-      'Integrated third-party APIs (Entropy, ChatGPT, Gemini) to enable AI-powered tools and analytics dashboards',
+      'Built scalable REST APIs using Node.js and Express.js for tool management, subscriptions, and user authentication',
+      'Designed MongoDB schemas and optimized queries for analytics, tool configs, and usage tracking',
+      'Implemented JWT-based authentication with RBAC — subscription tiers control API and feature access',
+      'Developed React.js frontend with Redux state management and Tailwind CSS for SaaS dashboards',
+      'Integrated AI APIs (ChatGPT, Gemini) with async streaming for real-time content generation features',
+      'Optimized full-stack performance using lazy loading, memoization, and query-level indexing',
     ],
     projects: [
       {
@@ -25,11 +27,11 @@ const experiences = [
         icon: 'solar:widget-6-bold-duotone',
         color: '#8b5cf6',
         points: [
-          'Designed and developed a SaaS tool builder to create, edit, customize, and publish interactive tools with live links',
-          'Implemented secure subscription flows (monthly/yearly) with upgrade options and usage limits',
-          'Built a tool data tracking system to monitor usage and provide visitor analytics',
-          'Developed an AI-powered dashboard integrating free and paid APIs for content generation and analytics',
-          'Created custom user interface including chat functionality, settings, and FAQ support sections',
+          'Built Node.js/Express backend with CRUD APIs for tool builder — create, edit, publish, and manage interactive tools',
+          'Designed MongoDB collections for user accounts, tool configurations, subscription plans, and visitor analytics',
+          'Implemented JWT auth with subscription-tier RBAC — free/pro/enterprise plan access control on both API and UI',
+          'Developed AI-powered dashboard integrating ChatGPT and Gemini APIs with streaming response handling',
+          'Built visitor analytics system tracking tool usage, conversion events, and quota consumption',
         ],
       },
       {
@@ -37,46 +39,54 @@ const experiences = [
         icon: 'solar:robot-bold-duotone',
         color: '#ec4899',
         points: [
-          'Built responsive Student & Admin dashboards with cohort/domain filters, CSV/XLSX exports, and detailed interview reports',
-          'Developed interactive mock interview UI with video/audio recording, live transcription, and AI-avatar integration',
-          'Implemented role domain tagging, inline admin question editing, and dynamic practice modules for students',
-          'Created frontend for Student Profiler tool with weighted average scoring and ranking system for company shortlisting',
+          'Developed Express.js APIs for interview session lifecycle — scheduling, recording, evaluation, and report generation',
+          'Built MongoDB data models for student profiles, cohorts, domain tags, scores, and interview transcripts',
+          'Implemented RBAC separating student and admin roles with protected API middleware and frontend route guards',
+          'Engineered server-side scoring engine with weighted average logic and company shortlisting ranking system',
+          'Built real-time mock interview UI with video/audio recording, live AI transcription, and avatar integration',
+          'Developed CSV/XLSX export pipeline — backend data aggregation with client-side download trigger',
         ],
       },
     ],
-    tech: ['React.js', 'Redux', 'Tailwind CSS', 'TypeScript', 'ChatGPT API', 'Gemini API'],
+    tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Redux', 'Tailwind CSS', 'TypeScript', 'JWT', 'RBAC', 'ChatGPT API', 'Gemini API'],
   },
   {
     company: 'Frantic Infotech Pvt Ltd',
-    role: 'Front End Web Developer',
+    role: 'Full Stack Developer',
     period: 'Dec 2022 – Feb 2024',
     location: 'Noida, India',
     type: 'Full-time',
     current: false,
     logo: 'solar:airplane-bold-duotone',
     color: '#22d3ee',
-    description: 'Developed responsive flight booking modules with real-time updates and seamless API integrations.',
+    description: 'Built full-stack flight booking modules — Node.js APIs aggregating external flight data, MySQL for booking records, and a React UI for real-time search and confirmations.',
     responsibilities: [
-      'Developed responsive flight booking modules using React.js with reusable UI components',
-      'Implemented real-time flight updates and booking confirmations through external API integrations',
-      'Enhanced the company website by modernizing design and improving overall user experience',
+      'Built Node.js/Express middleware layer to aggregate, normalize, and cache data from multiple external flight APIs',
+      'Developed REST API endpoints for flight search, seat availability, pricing filters, and booking confirmation',
+      'Integrated MySQL database for storing booking records, user preferences, and transaction history',
+      'Implemented server-side validation and error handling for booking flows with async API orchestration',
+      'Developed responsive React.js flight booking UI with reusable components and real-time status updates',
+      'Modernized company website — redesigned UI and improved overall performance and user experience',
     ],
     projects: [],
-    tech: ['React.js', 'JavaScript', 'REST APIs', 'CSS3', 'Bootstrap'],
+    tech: ['React.js', 'Node.js', 'Express.js', 'MySQL', 'REST APIs', 'JavaScript', 'Bootstrap', 'CSS3'],
   },
   {
     company: 'Yapıta Health Pvt Ltd',
-    role: 'Frontend Developer Intern',
+    role: 'Full Stack Developer Intern',
     period: 'Apr 2022 – Sep 2022',
     location: 'Gurugram, India',
     type: 'Internship',
     current: false,
     logo: 'solar:heart-pulse-bold-duotone',
     color: '#f472b6',
-    description: 'Built React-based pages and improved navigation flows for a health-tech platform.',
+    description: 'Built full-stack health platform features — Node.js auth APIs, JWT-secured routes, MySQL user data, and React pages for onboarding and authentication.',
     responsibilities: [
-      'Built multiple React-based pages including FAQ, landing, and authentication workflows',
-      'Improved navigation and login/signup processes for better usability and performance',
+      'Built JWT-based authentication API using Node.js and Express — secure signup, login, and session management',
+      'Implemented protected route middleware on the backend and auth guards on the React frontend',
+      'Integrated MySQL for user profile storage and health data management with parameterized queries',
+      'Built multiple React pages — FAQ, landing, and authentication workflows with smooth navigation flows',
+      'Improved login/signup UX and navigation performance reducing user drop-off during onboarding',
     ],
     projects: [],
     tech: ['React.js', 'HTML5', 'CSS3', 'JavaScript'],
@@ -105,7 +115,7 @@ export default function Experience() {
           </span>
           <h2 className="section-title">My Journey</h2>
           <p className="section-subtitle mx-auto">
-            3+ years of building real-world products across health-tech, travel, and SaaS industries.
+            3+ years of full-stack product development across SaaS, travel, and health-tech industries.
           </p>
         </motion.div>
 

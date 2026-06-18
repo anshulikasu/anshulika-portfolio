@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { Icon } from '@iconify/react'
 
 const roles = [
-  'Frontend Developer',
+  'Full Stack Developer',
   'React Specialist',
   'UI/UX Enthusiast',
   'TypeScript Developer',
@@ -153,11 +153,11 @@ export default function Hero() {
           className="text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed"
           style={{ color: 'var(--subtext)' }}
         >
-          I craft pixel-perfect, performant web experiences using{' '}
+          I build end-to-end web applications using{' '}
           <span style={{ color: 'var(--primary)' }} className="font-semibold">React</span>,{' '}
-          <span style={{ color: 'var(--primary)' }} className="font-semibold">TypeScript</span> &{' '}
-          <span style={{ color: 'var(--primary)' }} className="font-semibold">modern CSS</span>.
-          Currently building SaaS products at Outgrow.
+          <span style={{ color: 'var(--primary)' }} className="font-semibold">Node.js</span> &{' '}
+          <span style={{ color: 'var(--primary)' }} className="font-semibold">MongoDB</span>.
+          Currently building full-stack SaaS products at Outgrow.
         </motion.p>
 
         <motion.div

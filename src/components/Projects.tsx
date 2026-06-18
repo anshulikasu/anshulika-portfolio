@@ -11,17 +11,18 @@ const projects = [
     gradient: 'from-violet-600 to-purple-400',
     bgGlow: 'rgba(124, 58, 237, 0.15)',
     color: '#8b5cf6',
+    fullStack: true,
     description:
-      'A full-featured SaaS platform that lets users create, customize, and publish interactive marketing tools with real-time analytics and AI-powered capabilities.',
+      'A full-stack SaaS platform for creating, customizing, and publishing interactive marketing tools — with a Node.js/Express backend, MongoDB data layer, JWT auth, and AI-powered analytics dashboard.',
     features: [
-      'Drag-and-drop tool builder with live preview',
-      'Subscription management (monthly/yearly) with usage limits',
-      'Visitor analytics & data tracking dashboard',
-      'AI-powered content generation via ChatGPT & Gemini APIs',
-      'Custom chat UI, settings, FAQ support sections',
-      'Fully accessible, responsive design',
+      'Built REST APIs with Node.js & Express for tool CRUD, publishing, and subscription management',
+      'Designed MongoDB schemas for user data, tool configs, analytics events, and quota tracking',
+      'Implemented JWT authentication with RBAC — subscription tiers control feature access',
+      'Drag-and-drop tool builder UI with live preview and real-time data persistence',
+      'AI-powered content generation via ChatGPT & Gemini APIs with async streaming',
+      'Visitor analytics dashboard with optimized aggregation queries and lazy loading',
     ],
-    tech: ['React.js', 'Redux', 'Tailwind CSS', 'TypeScript', 'ChatGPT API', 'Gemini API', 'Framer Motion'],
+    tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Redux', 'Tailwind CSS', 'TypeScript', 'JWT', 'ChatGPT API', 'Gemini API'],
     type: 'SaaS Product',
     status: 'Live',
   },
@@ -33,17 +34,18 @@ const projects = [
     gradient: 'from-pink-600 to-rose-400',
     bgGlow: 'rgba(236, 72, 153, 0.15)',
     color: '#ec4899',
+    fullStack: true,
     description:
-      'An interactive mock interview platform with video recording, live AI transcription, avatar integration, and comprehensive admin/student dashboards for tracking performance.',
+      'A full-stack mock interview platform with a Node.js backend handling session management, RBAC, scoring logic, and CSV/XLSX export — paired with a real-time React UI for video interviews and AI transcription.',
     features: [
-      'Live video/audio recording with AI transcription',
-      'AI-avatar integration for realistic interview simulation',
-      'Student & Admin dashboards with cohort filters',
-      'CSV/XLSX export of interview reports',
-      'Role domain tagging and inline question editing',
-      'Weighted average scoring & company shortlisting system',
+      'Developed Express.js APIs for interview session lifecycle — create, record, evaluate, report',
+      'Built MongoDB data models for student profiles, cohorts, scores, and domain tagging',
+      'Implemented RBAC separating student and admin roles with protected API routes',
+      'Backend scoring engine: weighted average calculation and company shortlisting logic',
+      'Real-time video/audio recording with live AI transcription and avatar integration',
+      'CSV/XLSX export pipeline — server-side data aggregation with client-side download trigger',
     ],
-    tech: ['React.js', 'Redux', 'Tailwind CSS', 'REST APIs', 'TypeScript', 'Material UI'],
+    tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Redux', 'Tailwind CSS', 'TypeScript', 'JWT', 'RBAC', 'Material UI'],
     type: 'EdTech Platform',
     status: 'Live',
   },
@@ -55,38 +57,41 @@ const projects = [
     gradient: 'from-cyan-500 to-blue-400',
     bgGlow: 'rgba(34, 211, 238, 0.15)',
     color: '#22d3ee',
+    fullStack: false,
     description:
-      'A responsive flight booking web application with real-time availability checks, booking confirmations, and a modernized company landing experience.',
+      'A responsive flight booking application with Node.js middleware for external API orchestration, real-time availability checks, booking confirmation flows, and a modernized company website.',
     features: [
-      'Real-time flight availability and pricing updates',
-      'Seamless booking confirmation flows',
-      'Reusable React component library',
-      'External flight API integrations',
-      'Modernized company website design',
-      'Mobile-first responsive layouts',
+      'Built Node.js middleware layer to aggregate and normalize data from multiple flight APIs',
+      'Implemented booking confirmation flow with server-side validation and error handling',
+      'Developed REST API endpoints for search, filter, and seat availability queries',
+      'Reusable React component library for search forms, result cards, and booking steps',
+      'Real-time flight status updates via polling with optimistic UI feedback',
+      'Mobile-first responsive design with modernized company landing pages',
     ],
-    tech: ['React.js', 'JavaScript', 'REST APIs', 'Bootstrap', 'CSS3'],
+    tech: ['React.js', 'Node.js', 'Express.js', 'REST APIs', 'JavaScript', 'Bootstrap', 'CSS3'],
     type: 'Travel Platform',
     status: 'Delivered',
   },
   {
-    title: 'Health Platform UI',
+    title: 'Health Platform',
     subtitle: 'Healthcare Web Application',
     company: 'Yapıta Health',
     icon: 'solar:heart-pulse-bold-duotone',
     gradient: 'from-rose-500 to-pink-400',
     bgGlow: 'rgba(244, 114, 182, 0.15)',
     color: '#f472b6',
+    fullStack: false,
     description:
-      'A health-tech web application with smooth authentication flows, FAQ pages, and landing pages designed for optimal user engagement and accessibility.',
+      'A health-tech web application with a Node.js authentication backend, JWT-secured APIs, and a React frontend covering onboarding, FAQ, and landing pages for optimal user engagement.',
     features: [
-      'Multi-page React application architecture',
-      'Smooth authentication & onboarding workflows',
-      'FAQ and landing page components',
-      'Improved navigation for better usability',
-      'Performance-optimized login/signup process',
+      'Built JWT-based authentication API with Node.js — secure login, signup, and session management',
+      'Implemented protected routes on both backend (middleware) and frontend (React guards)',
+      'MySQL database integration for user records and health profile data',
+      'Multi-page React application with smooth onboarding and authentication workflows',
+      'Improved navigation flow and login/signup UX reducing drop-off rate',
+      'FAQ and landing page components with performance-optimized rendering',
     ],
-    tech: ['React.js', 'HTML5', 'CSS3', 'JavaScript'],
+    tech: ['React.js', 'Node.js', 'Express.js', 'MySQL', 'JWT', 'HTML5', 'CSS3', 'JavaScript'],
     type: 'Health-Tech',
     status: 'Delivered',
   },
@@ -117,7 +122,7 @@ export default function Projects() {
           </span>
           <h2 className="section-title">Featured Projects</h2>
           <p className="section-subtitle mx-auto">
-            Real-world products built for scale, designed for delight.
+            Full-stack products built for scale — React frontends, Node.js APIs, MongoDB & MySQL databases.
           </p>
         </motion.div>
 
@@ -156,10 +161,15 @@ export default function Projects() {
                     >
                       {proj.status}
                     </span>
-                    <span
-                      className="text-xs"
-                      style={{ color: 'var(--subtext)' }}
-                    >
+                    {proj.fullStack && (
+                      <span
+                        className="px-2.5 py-1 rounded-full text-xs font-semibold"
+                        style={{ background: 'rgba(34, 211, 238, 0.12)', color: '#22d3ee' }}
+                      >
+                        Full Stack
+                      </span>
+                    )}
+                    <span className="text-xs" style={{ color: 'var(--subtext)' }}>
                       @ {proj.company}
                     </span>
                   </div>

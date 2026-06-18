@@ -11,16 +11,17 @@ const skillCategories = [
       { name: 'HTML5', icon: 'vscode-icons:file-type-html', level: 95 },
       { name: 'CSS3', icon: 'vscode-icons:file-type-css', level: 92 },
       { name: 'JavaScript', icon: 'vscode-icons:file-type-js-official', level: 90 },
-      { name: 'TypeScript', icon: 'vscode-icons:file-type-typescript-official', level: 82 },
-      { name: 'SQL', icon: 'vscode-icons:file-type-sql', level: 70 },
+      { name: 'TypeScript', icon: 'vscode-icons:file-type-typescript-official', level: 85 },
+      { name: 'SQL', icon: 'vscode-icons:file-type-sql', level: 72 },
     ],
   },
   {
-    title: 'Frameworks & Libraries',
-    icon: 'solar:widget-bold-duotone',
+    title: 'Frontend',
+    icon: 'solar:monitor-bold-duotone',
     color: '#ec4899',
     skills: [
       { name: 'React.js', icon: 'vscode-icons:file-type-reactjs', level: 93 },
+      { name: 'React Native', icon: 'vscode-icons:file-type-reactjs', level: 72 },
       { name: 'Redux', icon: 'simple-icons:redux', level: 85 },
       { name: 'Tailwind CSS', icon: 'vscode-icons:file-type-tailwind', level: 90 },
       { name: 'Framer Motion', icon: 'simple-icons:framer', level: 80 },
@@ -30,15 +31,38 @@ const skillCategories = [
     ],
   },
   {
-    title: 'Tools & Others',
-    icon: 'solar:settings-bold-duotone',
+    title: 'Backend & Database',
+    icon: 'solar:server-bold-duotone',
     color: '#22d3ee',
     skills: [
+      { name: 'Node.js', icon: 'vscode-icons:file-type-node', level: 75 },
+      { name: 'Express.js', icon: 'simple-icons:express', level: 72 },
+      { name: 'MongoDB', icon: 'vscode-icons:file-type-mongo', level: 70 },
+      { name: 'MySQL', icon: 'vscode-icons:file-type-mysql', level: 68 },
       { name: 'REST APIs', icon: 'solar:transfer-horizontal-bold-duotone', level: 88 },
-      { name: 'OAuth / JWT', icon: 'solar:shield-keyhole-bold-duotone', level: 80 },
+      { name: 'CRUD Operations', icon: 'solar:database-bold-duotone', level: 82 },
+    ],
+  },
+  {
+    title: 'Auth & Security',
+    icon: 'solar:shield-keyhole-bold-duotone',
+    color: '#f472b6',
+    skills: [
+      { name: 'JWT Auth', icon: 'solar:shield-keyhole-bold-duotone', level: 83 },
+      { name: 'OAuth', icon: 'solar:lock-keyhole-bold-duotone', level: 80 },
+      { name: 'RBAC', icon: 'solar:user-check-bold-duotone', level: 78 },
+      { name: 'Authorization', icon: 'solar:key-bold-duotone', level: 80 },
+    ],
+  },
+  {
+    title: 'Tools & Other',
+    icon: 'solar:settings-bold-duotone',
+    color: '#fbbf24',
+    skills: [
+      { name: 'Git / GitHub', icon: 'mdi:github', level: 85 },
+      { name: 'Postman', icon: 'simple-icons:postman', level: 82 },
+      { name: 'VS Code', icon: 'vscode-icons:file-type-vscode', level: 92 },
       { name: 'Responsive Design', icon: 'solar:devices-bold-duotone', level: 95 },
-      { name: 'Dark/Light Theme', icon: 'solar:moon-bold-duotone', level: 90 },
-      { name: 'Git / GitHub', icon: 'mdi:github', level: 82 },
       { name: 'Accessibility a11y', icon: 'solar:accessibility-bold-duotone', level: 78 },
     ],
   },
@@ -70,11 +94,11 @@ export default function Skills() {
           </span>
           <h2 className="section-title">My Toolkit</h2>
           <p className="section-subtitle mx-auto">
-            Technologies and tools I use to bring ideas to life with clean, efficient code.
+            Full stack skills — from pixel-perfect UIs to backend APIs and databases.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((cat, ci) => (
             <motion.div
               key={cat.title}

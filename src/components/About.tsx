@@ -46,7 +46,7 @@ export default function About() {
           </span>
           <h2 className="section-title">Who I Am</h2>
           <p className="section-subtitle mx-auto">
-            A passionate frontend developer who turns ideas into beautiful, functional digital experiences.
+            A full stack developer who builds end-to-end — from pixel-perfect UIs to backend APIs and databases.
           </p>
         </motion.div>
 
@@ -88,9 +88,8 @@ export default function About() {
                   </div>
 
                   <p className="leading-relaxed mb-6 text-base" style={{ color: 'var(--subtext)' }}>
-                    I'm a frontend developer with <strong style={{ color: 'var(--text)' }}>3+ years of experience</strong> building
-                    scalable, accessible, and visually stunning web applications. I specialize in React.js
-                    ecosystems and have a deep passion for crafting user interfaces that are both beautiful and performant.
+                    I'm a full stack developer with <strong style={{ color: 'var(--text)' }}>3+ years of experience</strong> building
+                    scalable web applications end-to-end — from pixel-perfect React UIs to Node.js APIs and MongoDB databases. I specialize in React.js ecosystems with a strong eye for design and performance.
                   </p>
 
                   <p className="leading-relaxed text-base" style={{ color: 'var(--subtext)' }}>
